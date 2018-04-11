@@ -40,6 +40,7 @@ public class CondTest {
         
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.titleContains("Search"));
+
             //Condition Select all three options    
             driver.findElement(By.xpath("//div[@id='mountNode']/div/div[2]/div/form/div[3]/div/div[2]/div/div/div/div/label/div")).click();   // This selects NEW!!!!!!!!!1
             driver.findElement(By.xpath("//div[@id='mountNode']/div/div[2]/div/form/div[3]/div/div[2]/div/div/div/div[2]/label/div")).click();// This selects USED!!!!!!!!!1
