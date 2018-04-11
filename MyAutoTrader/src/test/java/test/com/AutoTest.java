@@ -70,7 +70,7 @@ public class AutoTest {
     public void setUpMethod() throws Exception {
         
         //calc = new Calc();
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\shashi\\Downloads\\geckodriver-v0.19.1-win64\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "C:\\data\\geckodriver.exe");
          baseUrl ="https://www.autotrader.com//";
         
     }
