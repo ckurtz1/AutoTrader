@@ -246,7 +246,7 @@ public class SpecTest {
 
 driver.quit();
 
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
     
     }
 
@@ -261,7 +261,7 @@ driver.quit();
     @BeforeMethod
     public void setUpMethod() throws Exception {
         
-        System.setProperty("webdriver.gecko.driver", "C:\\geckodriver-v0.19.1-win64\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "C:\\data\\geckodriver.exe");
         baseUrl ="https://www.autotrader.com/cars-for-sale/";
         //baseUrl ="https://www.autotrader.com";
 
