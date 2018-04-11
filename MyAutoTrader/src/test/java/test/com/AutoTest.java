@@ -106,6 +106,7 @@ public class AutoTest {
         driver.findElement(By.name("modelCodeListPlaceHolder")).sendKeys("5");
         driver.findElement(By.name("zip")).clear();
         driver.findElement(By.name("zip")).sendKeys("60107");  
+        driver.findElement(By.name("zip")).click();
         driver.findElement(By.id("Search")).click();
         
         WebDriverWait wait1 = new WebDriverWait(driver, 15);
