@@ -32,7 +32,7 @@ public class FeatureTest {
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void test() {
+    public void feature() {
     
      //FirefoxProfile profile = new FirefoxProfile(new File("C:\\Users\\ckurt\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\mk4m2kov.tester"));
      //FirefoxOptions opt = new FirefoxOptions();
