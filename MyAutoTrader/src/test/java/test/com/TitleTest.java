@@ -77,7 +77,7 @@ public class TitleTest {
 
         driver.findElement(By.xpath("//div[@id='mountNode']/div/div/header/div/div/nav/div/div[2]/ul/li/a")).click();
 
-        //WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait webDriverWait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.titleContains("Search"));
 
         String cfstitle = driver.getTitle();
