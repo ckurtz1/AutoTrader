@@ -14,6 +14,7 @@ import java.io.File;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -44,18 +45,18 @@ public class AutoTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-     @Test
-     public void testadd() {
+////     @Test
+////     public void testadd() {
+////     
+////     //assertEquals(calc.add(2,2), 4);
+////     
+////     }
+////     @Test
+////     public void testmul() {
+////     
+////     //assertEquals(calc.mul(2,3), 6);
      
-     //assertEquals(calc.add(2,2), 4);
-     
-     }
-     @Test
-     public void testmul() {
-     
-     //assertEquals(calc.mul(2,3), 6);
-     
-     }
+//     }
     
      
     @BeforeClass
@@ -70,7 +71,11 @@ public class AutoTest {
     public void setUpMethod() throws Exception {
         
         //calc = new Calc();
-        System.setProperty("webdriver.gecko.driver", "C:\\data\\geckodriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\data\\chromedriver.exe");
+
+
+//        System.setProperty("webdriver.gecko.driver", "C:\\data\\geckodriver.exe");
+
          baseUrl ="https://www.autotrader.com//";
         
     }
@@ -82,44 +87,58 @@ public class AutoTest {
      @Test
     public void fillForm() {
         
-        FirefoxProfile profile = new FirefoxProfile(new File("C:\\Users\\shashi\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\z4lakrot.tester"));
-FirefoxOptions opt = new FirefoxOptions();
-opt.setProfile(profile);
-driver = new FirefoxDriver(opt);
-driver.get(baseUrl);
+        System.out.println("launching Chrome browser"); 
+        driver = new ChromeDriver(); 
+        if (driver == null) fail (" driver is not initialize");
+        driver.get(baseUrl);
+
+//        FirefoxProfile profile = new FirefoxProfile(new File("C:\\Users\\shashi\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\z4lakrot.tester"));
+//        FirefoxOptions opt = new FirefoxOptions();
+//        opt.setProfile(profile);
+//        driver = new FirefoxDriver(opt);
+//        driver.get(baseUrl);
 
             
-              Select auto = new Select(driver.findElement(By.id("makeCodeListPlaceHolder")));
-            auto.selectByIndex(7);
-            auto.selectByIndex(7);
-                 driver.findElement(By.id("modelCodeListPlaceHolder")).click();
-                 driver.findElement(By.name("modelCodeListPlaceHolder")).sendKeys("5");
-                 driver.findElement(By.name("zip")).clear();
-                driver.findElement(By.name("zip")).sendKeys("60107");  
-                driver.findElement(By.id("Search")).click();
-                Select radius = new Select(driver.findElement(By.name("searchRadius")));
-radius.selectByIndex(5);
- Select minyear = new Select(driver.findElement(By.name("startYear")));
-minyear.selectByIndex(29);
-Select maxyear = new Select(driver.findElement(By.name("endYear")));
-maxyear.selectByIndex(7);
-Select minprice = new Select(driver.findElement(By.name("minPrice")));
-minprice.selectByIndex(25);
-Select maxprice = new Select(driver.findElement(By.name("maxPrice")));
-maxprice.selectByIndex(7);
-Select mileage = new Select(driver.findElement(By.name("maxMileage")));
-mileage.selectByIndex(3);
-Select sortby = new Select(driver.findElement(By.name("sortBy")));
-sortby.selectByIndex(3);
-Select perpage = new Select(driver.findElement(By.name("numRecords")));
-perpage.selectByIndex(0);
+        Select auto = new Select(driver.findElement(By.id("makeCodeListPlaceHolder")));
+        auto.selectByIndex(7);
+        auto.selectByIndex(7);
+        driver.findElement(By.id("modelCodeListPlaceHolder")).click();
+        driver.findElement(By.name("modelCodeListPlaceHolder")).sendKeys("5");
+        driver.findElement(By.name("zip")).clear();
+        driver.findElement(By.name("zip")).sendKeys("60107");  
+        driver.findElement(By.id("Search")).click();
+        
+        Select radius = new Select(driver.findElement(By.name("searchRadius")));
+        radius.selectByIndex(5);
+        
+        Select minyear = new Select(driver.findElement(By.name("startYear")));
+        minyear.selectByIndex(29);
+        
+        Select maxyear = new Select(driver.findElement(By.name("endYear")));
+        maxyear.selectByIndex(7);
+        
+        Select minprice = new Select(driver.findElement(By.name("minPrice")));
+        minprice.selectByIndex(25);
+        
+        Select maxprice = new Select(driver.findElement(By.name("maxPrice")));
+        maxprice.selectByIndex(7);
+        
+        Select mileage = new Select(driver.findElement(By.name("maxMileage")));
+        mileage.selectByIndex(3);
+        
+        Select sortby = new Select(driver.findElement(By.name("sortBy")));
+        sortby.selectByIndex(3);
+        
+        Select perpage = new Select(driver.findElement(By.name("numRecords")));
+        perpage.selectByIndex(0);
 
 
-WebDriverWait wait = new WebDriverWait(driver, 5);
-WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")));
- driver.findElement(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")).click();
- //driver.quit();
-{
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")));
+        driver.findElement(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")).click();
+ 
+        driver.quit();
+
 //year.selectByIndex(4);
                // driver.findElement(By.name("searchRadius")).sendKeys("5");
                 // driver.findElement(By.name("startYear")).sendKeys("22");
@@ -156,7 +175,7 @@ WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath
        
     }
     }
-    }
+    
     
 
              
