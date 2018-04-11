@@ -134,34 +134,34 @@ public class TitleTest {
         driver.navigate().back();
 ////        
 ////        //Trade my car
-        System.out.println("The trade my page test");
-
-	driver.findElement(By.xpath("//div[@id='mountNode']/div/div/header/div/div/nav/div/div[2]/ul/li[3]/a")).click();
- 
-        //WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.titleContains("Free"));
-
-        String tmctitle = driver.getTitle();
-        System.out.println("Trade my car page title = " + tmctitle);
-        String exptmctitle = "Free Instant Cash Offer and Car Trade-in Value Range from Kelley Blue Book - Autotrader";
-        
-        if(tmctitle.equals(exptmctitle)) {
-            System.out.println("The Page Title is Correct");
-        } else {
-             System.out.println("Page Title is Incorrect " + tmctitle );
-        }
-        
-        String tmcurl = driver.getCurrentUrl();
-        System.out.println("This is the Trade my car page URL = " + tmcurl);
-        String exptmcurl = "https://www.autotrader.com/trade-in-instant-cash-offer/?LNX=TIMATCHPNAV";
-       
-        if(tmcurl.equals(exptmcurl)){
-            System.out.println("The URL is correct");
-        } else {
-            System.out.println("The URL is incorrect");
-        }
-      
-        driver.navigate().back();
+//        System.out.println("The trade my page test");
+//
+//	driver.findElement(By.xpath("//div[@id='mountNode']/div/div/header/div/div/nav/div/div[2]/ul/li[3]/a")).click();
+// 
+//        //WebDriverWait wait = new WebDriverWait(driver, 10);
+//        wait.until(ExpectedConditions.titleContains("Free"));
+//
+//        String tmctitle = driver.getTitle();
+//        System.out.println("Trade my car page title = " + tmctitle);
+//        String exptmctitle = "Free Instant Cash Offer and Car Trade-in Value Range from Kelley Blue Book - Autotrader";
+//        
+//        if(tmctitle.equals(exptmctitle)) {
+//            System.out.println("The Page Title is Correct");
+//        } else {
+//             System.out.println("Page Title is Incorrect " + tmctitle );
+//        }
+//        
+//        String tmcurl = driver.getCurrentUrl();
+//        System.out.println("This is the Trade my car page URL = " + tmcurl);
+//        String exptmcurl = "https://www.autotrader.com/trade-in-instant-cash-offer/?LNX=TIMATCHPNAV";
+//       
+//        if(tmcurl.equals(exptmcurl)){
+//            System.out.println("The URL is correct");
+//        } else {
+//            System.out.println("The URL is incorrect");
+//        }
+//      
+//        driver.navigate().back();
         
 //////        //Find a Dealer
 //                System.out.println("The find a dealer page test");
