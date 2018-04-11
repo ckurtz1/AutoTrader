@@ -108,6 +108,9 @@ public class AutoTest {
         driver.findElement(By.name("zip")).sendKeys("60107");  
         driver.findElement(By.id("Search")).click();
         
+        WebDriverWait wait1 = new WebDriverWait(driver, 15);
+        wait1.until(ExpectedConditions.titleContains("BMW"));
+        
         Select radius = new Select(driver.findElement(By.name("searchRadius")));
         radius.selectByIndex(5);
         
