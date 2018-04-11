@@ -39,7 +39,7 @@ public class ZipCodeTest {
         if (driver == null) fail (" driver is not initialize");
         driver.get(baseUrl);
         
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.titleContains("Search"));
     
         //  ZIP code 
@@ -49,7 +49,7 @@ public class ZipCodeTest {
         
         // Submit
         driver.findElement(By.xpath("//button[@type='submit']")).click();
-        WebDriverWait wait1 = new WebDriverWait(driver, 15);
+        WebDriverWait wait1 = new WebDriverWait(driver, 30);
 
         WebElement body = driver.findElement(By.tagName("body"));
         String bodyText = body.getText();
