@@ -197,33 +197,33 @@ public class TitleTest {
 ////        //Find a Loan
         System.out.println("The find a loan page test");
 
-    
-	driver.findElement(By.xpath("//div[@id='mountNode']/div/div/header/div/div/nav/div/div[2]/ul/li[6]/a")).click();
-        
-	//WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.urlContains("loans"));
-
-        String loantitle = driver.getTitle();
-        System.out.println("Find a loan page title = " + loantitle);
-        String exploantitle = "Search for Cars For Sale Online - Find a Car at Autotrader";
-        
-        if(loantitle.equals(exploantitle)) {
-            System.out.println("The Page Title is Correct");
-        } else {
-             System.out.println("Page Title is Incorrect " + loantitle );
-        }
-        
-        String loanurl = driver.getCurrentUrl();
-        System.out.println("This is the Loan page URL = " + loanurl);
-        String exploanurl = "https://www.autotrader.com/car-loans/";
-       
-        if(loanurl.equals(exploanurl)){
-            System.out.println("The URL is correct");
-        } else {
-            System.out.println("The URL is incorrect");
-        }
-      
-        driver.navigate().back();
+//    
+//	driver.findElement(By.xpath("//div[@id='mountNode']/div/div/header/div/div/nav/div/div[2]/ul/li[6]/a")).click();
+//        
+//	//WebDriverWait wait = new WebDriverWait(driver, 10);
+//        wait.until(ExpectedConditions.urlContains("loans"));
+//
+//        String loantitle = driver.getTitle();
+//        System.out.println("Find a loan page title = " + loantitle);
+//        String exploantitle = "Search for Cars For Sale Online - Find a Car at Autotrader";
+//        
+//        if(loantitle.equals(exploantitle)) {
+//            System.out.println("The Page Title is Correct");
+//        } else {
+//             System.out.println("Page Title is Incorrect " + loantitle );
+//        }
+//        
+//        String loanurl = driver.getCurrentUrl();
+//        System.out.println("This is the Loan page URL = " + loanurl);
+//        String exploanurl = "https://www.autotrader.com/car-loans/";
+//       
+//        if(loanurl.equals(exploanurl)){
+//            System.out.println("The URL is correct");
+//        } else {
+//            System.out.println("The URL is incorrect");
+//        }
+//      
+//        driver.navigate().back();
 ////        
 ////             //Find Insurance
 ////
