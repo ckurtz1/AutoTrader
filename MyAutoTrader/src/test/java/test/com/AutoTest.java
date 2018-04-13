@@ -99,48 +99,48 @@ public class AutoTest {
 //        driver.get(baseUrl);
 
             
-        Select auto = new Select(driver.findElement(By.id("makeCodeListPlaceHolder")));
-        auto.selectByIndex(7);
-        auto.selectByIndex(7);
-        driver.findElement(By.id("modelCodeListPlaceHolder")).click();
-        driver.findElement(By.name("modelCodeListPlaceHolder")).sendKeys("5");
-        driver.findElement(By.name("zip")).clear();
-        driver.findElement(By.name("zip")).sendKeys("60107");  
-        driver.findElement(By.name("zip")).click();
-        driver.findElement(By.id("Search")).click();
-        
-        WebDriverWait wait1 = new WebDriverWait(driver, 15);
-        wait1.until(ExpectedConditions.titleContains("BMW"));
-        
-        Select radius = new Select(driver.findElement(By.name("searchRadius")));
-        radius.selectByIndex(5);
-        
-        Select minyear = new Select(driver.findElement(By.name("startYear")));
-        minyear.selectByIndex(29);
-        
-        Select maxyear = new Select(driver.findElement(By.name("endYear")));
-        maxyear.selectByIndex(7);
-        
-        Select minprice = new Select(driver.findElement(By.name("minPrice")));
-        minprice.selectByIndex(25);
-        
-        Select maxprice = new Select(driver.findElement(By.name("maxPrice")));
-        maxprice.selectByIndex(7);
-        
-        Select mileage = new Select(driver.findElement(By.name("maxMileage")));
-        mileage.selectByIndex(3);
-        
-        Select sortby = new Select(driver.findElement(By.name("sortBy")));
-        sortby.selectByIndex(3);
-        
-        Select perpage = new Select(driver.findElement(By.name("numRecords")));
-        perpage.selectByIndex(0);
-
-
-        WebDriverWait wait2 = new WebDriverWait(driver, 10);
-        WebElement element = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")));
-        driver.findElement(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")).click();
- 
+//        Select auto = new Select(driver.findElement(By.id("makeCodeListPlaceHolder")));
+//        auto.selectByIndex(7);
+//        auto.selectByIndex(7);
+//        driver.findElement(By.id("modelCodeListPlaceHolder")).click();
+//        driver.findElement(By.name("modelCodeListPlaceHolder")).sendKeys("5");
+//        driver.findElement(By.name("zip")).clear();
+//        driver.findElement(By.name("zip")).sendKeys("60107");  
+//        driver.findElement(By.name("zip")).click();
+//        driver.findElement(By.id("Search")).click();
+//        
+//        WebDriverWait wait1 = new WebDriverWait(driver, 15);
+//        wait1.until(ExpectedConditions.titleContains("BMW"));
+//        
+//        Select radius = new Select(driver.findElement(By.name("searchRadius")));
+//        radius.selectByIndex(5);
+//        
+//        Select minyear = new Select(driver.findElement(By.name("startYear")));
+//        minyear.selectByIndex(29);
+//        
+//        Select maxyear = new Select(driver.findElement(By.name("endYear")));
+//        maxyear.selectByIndex(7);
+//        
+//        Select minprice = new Select(driver.findElement(By.name("minPrice")));
+//        minprice.selectByIndex(25);
+//        
+//        Select maxprice = new Select(driver.findElement(By.name("maxPrice")));
+//        maxprice.selectByIndex(7);
+//        
+//        Select mileage = new Select(driver.findElement(By.name("maxMileage")));
+//        mileage.selectByIndex(3);
+//        
+//        Select sortby = new Select(driver.findElement(By.name("sortBy")));
+//        sortby.selectByIndex(3);
+//        
+//        Select perpage = new Select(driver.findElement(By.name("numRecords")));
+//        perpage.selectByIndex(0);
+//
+//
+//        WebDriverWait wait2 = new WebDriverWait(driver, 10);
+//        WebElement element = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")));
+//        driver.findElement(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")).click();
+// 
         driver.quit();
 
 //year.selectByIndex(4);
