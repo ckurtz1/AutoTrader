@@ -103,7 +103,7 @@ public class AutoTest {
         auto.selectByIndex(7);
         auto.selectByIndex(7);
         driver.findElement(By.id("modelCodeListPlaceHolder")).click();
-        driver.findElement(By.name("modelCodeListPlaceHolder")).sendKeys("5");
+        driver.findElement(By.name("modelCodeListPlaceHolder")).sendKeys("7");
         driver.findElement(By.name("zip")).clear();
         driver.findElement(By.name("zip")).sendKeys("60107");  
         driver.findElement(By.name("zip")).click();
@@ -137,10 +137,12 @@ public class AutoTest {
         perpage.selectByIndex(0);
 
 
-        WebDriverWait wait2 = new WebDriverWait(driver, 10);
+            
+        WebDriverWait wait2 = new WebDriverWait(driver, 5);
         WebElement element = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")));
         driver.findElement(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")).click();
- 
+       
+        
         driver.quit();
 
 //year.selectByIndex(4);
