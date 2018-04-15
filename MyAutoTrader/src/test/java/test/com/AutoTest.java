@@ -164,10 +164,8 @@ public class AutoTest {
         driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[19]/div/div[2]/div[1]/div/label[1]/div[1]")).click();
          
        driver.findElement(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")).click();
-       
-   
-       
-        WebDriverWait wait2 = new WebDriverWait(driver, 5);
+      
+       WebDriverWait wait2 = new WebDriverWait(driver, 5);
         wait1.until(ExpectedConditions.titleContains("Homepage"));
          driver.quit();
         
