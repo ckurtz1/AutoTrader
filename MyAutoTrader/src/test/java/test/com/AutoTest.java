@@ -129,21 +129,60 @@ public class AutoTest {
         
         Select mileage = new Select(driver.findElement(By.name("maxMileage")));
         mileage.selectByIndex(3);
-        
-        Select sortby = new Select(driver.findElement(By.name("sortBy")));
-        sortby.selectByIndex(3);
-        
-        Select perpage = new Select(driver.findElement(By.name("numRecords")));
-        perpage.selectByIndex(0);
 
-
-            
-        WebDriverWait wait2 = new WebDriverWait(driver, 5);
-        WebElement element = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")));
-        driver.findElement(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")).click();
+        
        
         
-        driver.quit();
+       driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[6]/div/div[1]/div/h3/strong")).click();
+       driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[6]/div/div[2]/div[1]/div/label[6]/div[1]")).click();
+
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[9]/div/div[1]/div/h3/strong")).click();
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[9]/div/div[2]/div[1]/div/label[8]/div[1]")).click();
+        
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[11]/div/div[1]/div/h3/strong")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[11]/div/div[2]/div[1]/div/label[1]/div[1]")).click();
+        
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[1]/div/h3/strong")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[2]/div[1]/div/label[1]/div[1]")).click();
+        
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[2]/div[1]/div/label[2]/div[1]")).click();
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[2]/div[1]/div/label[3]/div[1]")).click();
+         driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[2]/div[1]/div/label[4]/div[1]")).click();
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[2]/div[1]/div/label[5]/div[1]")).click();
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[2]/div[1]/div/label[6]/div[1]")).click();
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[2]/div[1]/div/label[7]/div[1]")).click();
+         driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[2]/div[1]/div/label[8]/div[1]")).click();
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[2]/div[1]/div/label[9]/div[1]")).click();
+         driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[12]/div/div[2]/div[1]/div/label[10]/div[1]")).click();
+        
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[13]/div/div[2]/div[1]/div/label[1]/div[1]")).click();
+        
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[15]/div/div[1]/div/h3/strong")).click();
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[15]/div/div[2]/div[1]/div/label[2]/div[1]")).click();
+           
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[19]/div/div[1]/div/h3/strong")).click();
+        driver.findElement(By.xpath("html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[2]/form[1]/div[19]/div/div[2]/div[1]/div/label[1]/div[1]")).click();
+         
+       driver.findElement(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")).click();
+       
+   
+       
+        WebDriverWait wait2 = new WebDriverWait(driver, 5);
+        wait1.until(ExpectedConditions.titleContains("Homepage"));
+         driver.quit();
+        
+//         Select sortby = new Select(driver.findElement(By.name("sortBy")));
+//        sortby.selectByIndex(3);
+//        
+//        Select perpage = new Select(driver.findElement(By.name("numRecords")));
+//        perpage.selectByIndex(0);
+//       
+     
+       // driver.findElement(By.xpath("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")).click();
+        
+        //WebDriverWait wait2 = new WebDriverWait(driver, 5);
+       // WebElement element = wait2.until(ExpectedConditions.elementToBeClickable(By.name("html/body/div[1]/div/div[1]/header/div/div/nav/div/div[1]/div/div[1]/a/img[1]")));
+       // driver.quit();
 
 //year.selectByIndex(4);
                // driver.findElement(By.name("searchRadius")).sendKeys("5");
