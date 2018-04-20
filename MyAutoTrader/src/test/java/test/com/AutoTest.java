@@ -91,6 +91,8 @@ public class AutoTest {
         driver = new ChromeDriver(); 
         if (driver == null) fail (" driver is not initialize");
         driver.get(baseUrl);
+        
+      
 
 //        FirefoxProfile profile = new FirefoxProfile(new File("C:\\Users\\shashi\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\z4lakrot.tester"));
 //        FirefoxOptions opt = new FirefoxOptions();
@@ -99,14 +101,14 @@ public class AutoTest {
 //        driver.get(baseUrl);
 
             
-        Select auto = new Select(driver.findElement(By.id("makeCodeListPlaceHolder")));
+        Select auto = new Select(driver.findElement(By.id("makeCodeListPlaceHolderBMW")));
         auto.selectByIndex(7);
         auto.selectByIndex(7);
         driver.findElement(By.id("modelCodeListPlaceHolder")).click();
         driver.findElement(By.name("modelCodeListPlaceHolder")).sendKeys("7");
         driver.findElement(By.name("zip")).clear();
         driver.findElement(By.name("zip")).sendKeys("60107");  
-        driver.findElement(By.name("zip")).click();
+        //driver.findElement(By.name("zip")).click();
         driver.findElement(By.id("Search")).click();
         
         WebDriverWait wait1 = new WebDriverWait(driver, 15);
